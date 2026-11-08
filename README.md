@@ -1,5 +1,9 @@
 # SwarmWatch — forensic monitor for swarm logs
 
+[![tests](https://github.com/onvavite/swarmwatch/actions/workflows/tests.yml/badge.svg)](https://github.com/onvavite/swarmwatch/actions/workflows/tests.yml)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 **Swarm Alignment Hackathon, 6–8 Nov 2026 — Track 4: Multi-Agent Oversight and Control.**
 Solo entry by Onvavite (@onvavite).
 
@@ -49,6 +53,31 @@ python -m swarmwatch.cli evaluate                        # measured metrics
 python -m unittest discover -s tests -v                  # 17 tests
 ```
 
+## Install (optional)
+
+No dependencies: the package is standard library only. To get the
+`swarmwatch` command on your PATH:
+
+```bash
+pip install .
+swarmwatch evaluate
+```
+
+## Repository structure
+
+```
+swarmwatch/            # the monitor (stdlib only)
+  schema.py            # JSONL log schema (agent, ts, channel, action, content, declared)
+  generator.py         # seeded synthetic scenarios: hidden / control / churn / split
+  detectors.py         # the 3 detectors + keyword / busiest-channel baselines
+  evaluate.py          # measured precision / recall / false-positive rate
+  cli.py               # `generate` / `detect` / `evaluate`
+tests/                 # 17 unit tests (one file per detector)
+examples/              # demo logs (hidden, control, churn, split + controls)
+results/               # measured evaluation outputs (Friday + Saturday)
+.github/workflows/     # CI: tests + evaluation on Python 3.10–3.12
+```
+
 ## Friday results (measured, 6 Nov 2026)
 
 Measured 6 Nov 2026 (`results/friday_eval.json`, produced by
@@ -85,3 +114,7 @@ submission before 23:59 AoE.
 
 0 $. Synthetic logs only, no GPU, no paid model. Evaluation is
 deterministic and replayable by the judges from the provided logs.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
