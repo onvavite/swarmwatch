@@ -1,0 +1,31 @@
+{
+  "n_hidden": 20,
+  "n_control": 20,
+  "detector": {
+    "true_positives": 20,
+    "false_positives": 0,
+    "recall": 1.0,
+    "false_positive_rate": 0.0,
+    "precision": 1.0
+  },
+  "baseline_keyword": {
+    "true_positives": 0,
+    "false_positives": 0,
+    "recall": 0.0,
+    "false_positive_rate": 0.0
+  },
+  "detector_churn": {
+    "n_scenarios": 20,
+    "true_positives": 20,
+    "false_positives": 0,
+    "recall": 1.0,
+    "false_positive_rate": 0.0
+  },
+  "detector_split": {
+    "n_scenarios": 20,
+    "true_positives": 20,
+    "false_positives": 0,
+    "recall": 1.0,
+    "false_positive_rate": 0.0
+  }
+}
