@@ -1,5 +1,7 @@
 # SwarmWatch — forensic monitor for swarm logs
 
+![SwarmWatch — hidden coordination channels burning through a swarm of agent nodes](images/hero.png)
+
 [![tests](https://github.com/onvavite/swarmwatch/actions/workflows/tests.yml/badge.svg)](https://github.com/onvavite/swarmwatch/actions/workflows/tests.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
